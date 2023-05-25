@@ -1,0 +1,38 @@
+name: deploy
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Cache APT Packages
+        uses: actions/cache@v3
+        with:
+          path: /var/cache/apt
+          key: ${{ runner.os }}-apt-${{ hashFiles('**/apt-get.txt') }}
+          restore-keys: ${{ runner.os }}-apt-
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y optipng jpegoptim
+
+      - name: Build
+        run: make
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ./build/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
