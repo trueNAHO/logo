@@ -2,34 +2,7 @@ BUILD_BACKGROUND_TRANSPARENT := transparent
 BUILD_OUTPUT_DIR := ./build
 FILENAME_SEPERATOR := _
 IMAGE_OUTPUT_FILE_PREFIX := naho_logo
-IMAGE_RESOLUTIONS := 32 \
-					 64 \
-					 128 \
-					 144 \
-					 240 \
-					 256 \
-					 360 \
-					 426 \
-					 480 \
-					 512 \
-					 640 \
-					 720 \
-					 854 \
-					 1024 \
-					 1080 \
-					 1280 \
-					 1440 \
-					 1920 \
-					 2048 \
-					 2160 \
-					 2560 \
-					 2880 \
-					 3840 \
-					 4096 \
-					 4320 \
-					 5120 \
-					 7680 \
-					 8192
+IMAGE_RESOLUTIONS := 256
 JPG_EXTENSION := jpg
 PNG_EXTENSION := png
 SVG_FILE_PATH := ./src/logo.svg
@@ -106,4 +79,3 @@ create-build-directory:
 # Remove the build directory and its content.
 delete-build-directory:
 	rm --recursive --force "$(BUILD_OUTPUT_DIR)"
-
