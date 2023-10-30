@@ -1,0 +1,70 @@
+= Logo
+:toc:
+
+image::src/main.svg[width=100%]
+
+== About
+
+https://github.com/trueNAHO[NAHO]'s logo.
+
+== Installation
+
+Download the logo and its variations from the
+https://github.com/trueNAHO/logo/releases[Release page]:
+
+=== SVG
+
+The SVG file has the following name:
+
+* `naho_logo.svg`
+
+=== JPEG or PNG
+
+The optimized JPEG and PNG files are available in various background color and
+dimension combinations. The generated files have the following naming scheme:
+
+----
+naho_logo_<BACKGROUND_COLOR>_<WIDTH>x<HEIGHT>.<EXTENSION>
+----
+
+The variables from the naming scheme can have the following values:
+
+[cols="1,100"]
+|===
+| Variable
+| Possible Values
+
+| `BACKGROUND_COLOR`
+| `aqua`, `black`, `blue`, `fuchsia`, `gray`, `green`, `lime`, `maroon`, `navy`,
+  `olive`, `purple`, `red`, `silver` `teal`, `transparent`, `white`, `yellow`
+
+| `HEIGHT` or `WIDTH`
+| `32`, `64`, `128`, `144`, `240`, `256`, `360`, `426`, `480`, `512`, `640`,
+  `720`, `854`, `1024`, `1080`, `1280`, `1440`, `1920` `2048`, `2160`, `2560`,
+  `2880`, `3840`, `4096`
+
+| `EXTENSION`
+| `jpg`, `png`
+|===
+
+NOTE: A JPEG image with a `transparent` `BACKGROUND_COLOR` is not generated
+because it defaults to some arbitrary background color.
+
+== Usage
+
+To build the images with https://nixos.wiki/wiki/Nix_Installation_Guide[`nix`],
+run:
+
+[,bash]
+----
+nix build
+----
+
+== Contributing
+
+To contribute, please review link:docs/contributing.adoc[our contribution
+guidelines].
+
+== License
+
+This project is licensed under link:LICENSE[MIT].
