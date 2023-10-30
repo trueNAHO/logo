@@ -32,6 +32,7 @@
             hooks = {
               alejandra.enable = true;
               convco.enable = true;
+              yamllint.enable = true;
             };
 
             settings.alejandra.verbosity = "quiet";
