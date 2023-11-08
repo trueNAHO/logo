@@ -14,7 +14,7 @@ https://github.com/trueNAHO/logo/releases[Release page].
 
 === SVG
 
-The SVG file has the following name:
+The optimized SVG file has the following name:
 
 * `naho_logo.svg`
 
