@@ -10,7 +10,7 @@ https://github.com/trueNAHO[NAHO]'s logo.
 == Installation
 
 Download the logo and its variations from the
-https://github.com/trueNAHO/logo/releases[Release page]:
+https://github.com/trueNAHO/logo/releases[Release page].
 
 === SVG
 
