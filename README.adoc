@@ -55,7 +55,7 @@ because it defaults to some arbitrary background color.
 To build the images with https://nixos.wiki/wiki/Nix_Installation_Guide[`nix`],
 run:
 
-[,bash]
+,bash]
 ----
 nix build
 ----
